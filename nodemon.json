@@ -1,0 +1,6 @@
+{
+    "env": {
+        "MONGO_ATLAS_PASS" : "messilo18_",
+        "JWT_SECRET_KEY": "SECRetkEYoHHH"
+    }
+}
