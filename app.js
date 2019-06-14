@@ -54,12 +54,18 @@ app.use((req, res, next) => {
 app.use('/products',productRoutes);
 app.use('/orders',orderRoutes);
 app.use('/users',userRoutes);
+app.use('/',(req,res,next) => {
 
+    res.send('Welcome ,you have the following headers set ' + Object.keys(req.headers) );       
+
+    });
 // middleware for errors
 app.use((req,res,next) => {
+       
         const error = new Error('Not found');
         error.status = 400;
         next(error);
+
 });
 
 app.use((error, req, res, next) => {
